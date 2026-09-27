@@ -1,0 +1,36 @@
+{
+  "name": "opencode2-subagent-aux",
+  "version": "0.3.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./index.ts"
+  },
+  "files": [
+    "index.ts",
+    "src",
+    "docs",
+    "README.md"
+  ],
+  "scripts": {
+    "check": "tsc --noEmit",
+    "test": "node test/smoke.mjs",
+    "format": "prettier --write index.ts src test docs package.json tsconfig.json README.md",
+    "format:check": "prettier --check index.ts src test docs package.json tsconfig.json README.md"
+  },
+  "dependencies": {
+    "@opencode/plugin": "2.0.12",
+    "@opencode/schema": "2.0.12",
+    "effect": "4.0.0-rc.112"
+  },
+  "devDependencies": {
+    "@opencode/client": "2.0.12",
+    "@types/node": "^24.0.0",
+    "prettier": "3.6.2",
+    "typescript": "^5.9.0"
+  },
+  "prettier": {
+    "semi": false,
+    "printWidth": 120
+  }
+}
